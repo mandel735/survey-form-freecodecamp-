@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head name=survey-form>
+    <title>survey form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href=styles.css>
+    <style>
+          label, button {
+  display: block;
+  margin: 10 0
+}
+label[id=radio-label] {
+  display: unset;
+}
+fieldset, form{ 
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: auto
+  ;font-size: 20
+}
+fieldset{
+  border-width: 5px
+  ;background-color: rgba(0,0,0,80%);
+  border-color: #7B241C;
+  
+}
+
+p, h1{ 
+  text-align: center
+}
+p{
+  font-size: 120%
+}
+h1{
+  box-shadow: 0 0 30px 0 white;
+  width: 240;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
+          
+}
+.1{
+  display: unset;
+}
+textarea{
+  height: 60;
+  width: 260
+}
+
+body{
+  background-image: url(https://miro.medium.com/max/1400/1*5lyavS59mazOFnb55Z6znQ.png);
+  color: rgba(210,210,210)
+}
+hr{
+  height: 1px;
+  background-color: #A93226
+  ;border-color: #7B241C
+}
+    </style>
+    </head>
+    <body>
+      <h1 id=title>survey form</h1>
+    <fieldset>
+    <p id=description>this is a short survey about preference on movies</p>
+    <form id=survey-form>
+      <label id=dropdown-label for=dropdown>which one do you like more?
+        <select id=dropdown name=dropdown>
+        <option value=tv-series>tv series</option>
+        <option value=movies>movies</option>
+        </select></label>
+        <hr>
+        <label id=genre-label for=genre>what is your favorite genre?</label>
+        <label id=radio-label>action</label><input type=radio name="movie genre" value=action>
+        <label id=radio-label >comedy</label><input type=radio name="movie genre" value=comedy >
+        <label id=radio-label>drama</label><input type=radio name="movie genre" value=drama>
+        <label id=radio-label>horror</label><input type=radio name="movie genre" value=horror>
+<hr>
+        <label>which of these movies do you like?</label>
+      <input type=checkbox value=interstellar><label class=1>interstellar</label>
+      <input type=checkbox value=the-notebook><label class=1>the notebook</label>
+      <input type=checkbox value=bedtime-stories><label class=1>bedtime stories</label>
+      <input type=checkbox value=harry-potter><label class=1 >harry potter</label>
+<hr>
+<label>please explain why you like the genre that you chose</label><textarea name=explanation id=explanation placeholder="your answer"></textarea>
+<hr>
+
+      <label id=name-label for="name">enter name <input id=name type=text required placeholder=name></label>
+<hr>
+      <label for="email" id=email-label>enter email <input id=email type=email required placeholder=email ></label>
+<hr>
+      <label id=number-label for=number>enter number <input id=number type=number max=8 min=8 placeholder=00000000 ></label>
+<hr>      
+      <button id=submit type=submit> submit </button>
+      </form>
+      </fieldset>
+</body>
